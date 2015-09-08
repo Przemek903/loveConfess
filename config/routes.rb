@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :confessions, except: [:index, :destroy]
+  devise_for :admins
+  resources :confessions, except: [:destroy]
 
   root 'static#home'
 

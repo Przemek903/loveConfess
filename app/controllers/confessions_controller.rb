@@ -12,6 +12,10 @@ class ConfessionsController < ApplicationController
     end
   end
 
+  def index
+    @confessions = Confession.all
+  end
+
   def show
     @confession = Confession.find(params[:id])
   end

@@ -1,0 +1,32 @@
+<% if admin_signed_in? %>
+	<div class="container">
+	  <div class="row">
+	 	<div class="col-md-1"></div>
+	 	<div class="col-md-10">
+	 		<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Who</th>
+			      	<th>To Whom</th>
+			      	<th>Description</th>
+			      	<th>Confirm?</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+				    <% @confessions.each do |conf|  %>
+				      <% if conf.status == "Not confirmed" %>
+						<tr>
+							<td><%= conf.author %></td>
+							<td><%= conf.receiver %></td>  
+							<td><%= conf.description %></td>
+							<td> <%= link_to "Confirm", "#", class: "btn btn-danger" %></td> 
+						</tr>
+					  <% end %>
+					<% end %>
+			    </tbody>
+			</table>
+	 	</div>
+	 	<div class="col-md-1"></div>
+	  </div> 	         
+	</div>
+<% end %>
