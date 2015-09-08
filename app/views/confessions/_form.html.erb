@@ -1,0 +1,36 @@
+<%= form_for(@confession) do |f| %>
+		
+		<p class="btn btn-primary" id="cancelBuy">Cancel</p>
+
+		<div class="form-group">
+			<%= f.label :author, "Your Name" %> <br>
+			<%= f.text_field :author, :class => "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :receiver, "To Whom" %> <br>
+			<%= f.text_field :receiver, :class => "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :description, "Description" %> <br>
+			<%= f.text_field :description, :class => "form-control" %>
+		</div>
+
+		<%= f.hidden_field :pixelPhoto, :value => "One_million.png" %>
+
+		<%= f.hidden_field :coordinateX, :value => false %>
+
+		<%= f.hidden_field :coordinateY, :value => false %>
+
+		<%= f.hidden_field :width, :value => false %>
+
+		<%= f.hidden_field :height, :value => false %>
+
+		<%= f.hidden_field :status, :value => "Not confirmed" %>
+
+		<div class="actions">
+    		<%= f.submit "Confirm", :class => "btn btn-primary" %>
+  		</div>
+
+	<% end %>

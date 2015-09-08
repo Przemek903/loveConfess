@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row">
+		<p class="btn btn-primary show-popup">Select pixels</p>
+		<p class="value">Selected pixels: 0</p>
+
+		<canvas id="myCanvas" width="1000" height="1000" style="border:1px solid #000000;"></canvas>
+
+		<%= javascript_include_tag "DrawRect.js" %>
+	</div>
+	<div class="popup newConfession">
+		<blockquote class="blockquote-reverse">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">	<%= render 'form' %></div>
+			<div class="col-md-1"></div>
+		</blockquote>
+	</div>
+</div>

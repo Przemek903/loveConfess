@@ -1,0 +1,7 @@
+$(document).ready(function() {
+	$(".popup").html("<%= j (render 'conffes') %>");
+	p = $(".popup");
+	$("#cancel").click(function(){
+    	p.hide()
+	});
+});

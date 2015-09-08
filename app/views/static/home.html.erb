@@ -1,0 +1,18 @@
+<div id="pixelPos">
+  <% @confessions.each do |con| %>
+    <%= link_to image_tag( "image-map.png", style: "top:#{con.coordinateY}px; left:#{con.coordinateX}px; width: #{con.width}px; height: #{con.height}px; position:absolute" ), con, remote: true,  class: "show-popup" %>
+  <% end %>  
+</div>
+
+<div class="popup">
+    <blockquote class="blockquote-reverse">
+    <h3>Dear Sandra</h3>
+    <%= image_tag "One_million.png", width: '100', height: '100' %>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <footer>Przemek</cite></footer>
+    <button type="btn btn-success" id="cancel" class="btn btn-default cancel">Cancel</button>
+  </blockquote>
+</div>
+
+
+ 

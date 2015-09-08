@@ -1,0 +1,7 @@
+  <blockquote class="blockquote-reverse">
+    <h3>Dear <%= @confession.receiver %></h3>
+    <%= image_tag "One_million.png", width: '100', height: '100' %>
+    <p><%= @confession.description %></p>
+    <footer><%= @confession.author %></cite></footer>
+    <button type="btn btn-success" id="cancel" class="btn btn-default cancel">Cancel</button>
+  </blockquote>
